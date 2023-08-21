@@ -9,10 +9,10 @@ namespace Entity_Framework_Core
 {
     public class ApplicationDbContext :DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+       
             optionsBuilder.UseSqlServer(
                 @"Server=DESKTOP-9SALBLK;Database=EFCore;Trusted_Connection=True");
-        }
+       
     }
 }
