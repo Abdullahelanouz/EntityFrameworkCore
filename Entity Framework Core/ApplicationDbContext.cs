@@ -17,7 +17,9 @@ namespace Entity_Framework_Core
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<Blog>()
+                .Property(m => m.Url)
+                .IsRequired();
         }
         DbSet<Blog> Blogs { get; set; }
 
