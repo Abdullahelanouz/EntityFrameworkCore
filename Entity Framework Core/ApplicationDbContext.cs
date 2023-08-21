@@ -13,6 +13,8 @@ namespace Entity_Framework_Core
        
             optionsBuilder.UseSqlServer(
                 @"Server=DESKTOP-9SALBLK;Database=EFCore;Trusted_Connection=True");
-       
+
+        public DbSet<Employee> Employes { get; set; }
+
     }
 }
