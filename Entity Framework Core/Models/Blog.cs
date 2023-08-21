@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity_Framework_Core
+namespace Entity_Framework_Core.Models
 {
-    public class Employee
+    public class Blog
     {
         public int Id { get; set; }
-         
-        public string Name { get; set; }
+        [Required]
+        public string Url { get; set; }
     }
 }

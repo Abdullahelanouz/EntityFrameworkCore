@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entity_Framework_Core.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,13 @@ namespace Entity_Framework_Core
             optionsBuilder.UseSqlServer(
                 @"Server=DESKTOP-9SALBLK;Database=EFCore;Trusted_Connection=True");
 
-        public DbSet<Employee> Employes { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+        }
+        DbSet<Blog> Blogs { get; set; }
+
+       
 
     }
 }
